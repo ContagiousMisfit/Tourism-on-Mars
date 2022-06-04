@@ -7,7 +7,6 @@ public class NaveDTO {
 	private String modelo;
 	private int assentos;
 	
-	
 	public NaveDTO() {};
 	
 	public NaveDTO(String modelo, int assentos) {
