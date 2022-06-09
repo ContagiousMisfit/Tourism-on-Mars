@@ -1,0 +1,35 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap')
+	;
+
+body {
+	background-image: url(../assets/fundo.png);
+	background-size: cover;
+	color: #CDCDCD;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15vh;
+}
+
+p {
+	font-size: 18px;
+	padding-bottom: 30px;
+}
+
+a {
+	font-size: 22px;
+	font-family: 'Space Mono', monospace;
+	box-shadow: -8px 16px 32px -1px #121212;
+	padding: 16px 250px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+}

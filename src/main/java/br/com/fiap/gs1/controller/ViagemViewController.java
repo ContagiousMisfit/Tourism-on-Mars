@@ -1,9 +1,5 @@
 package br.com.fiap.gs1.controller;
 
-import br.com.fiap.gs1.dtos.FormRequestDTO;
-import br.com.fiap.gs1.dtos.FormResponseDTO;
-import br.com.fiap.gs1.model.Comandante;
-import br.com.fiap.gs1.model.Nave;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,63 +10,63 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
-import br.com.fiap.gs1.model.Viagem;
-import br.com.fiap.gs1.repository.ViagemRepository;
-
-import javax.transaction.Transactional;
+import br.com.fiap.gs1.model.Viagens;
+import br.com.fiap.gs1.repository.ViagensRepository;
 
 
 @Controller
 @RequestMapping("viagens")
 public class ViagemViewController {
 
-	private ViagemRepository viagemRepository;
+	private ViagensRepository viagensRepository;
 
-	public ViagemViewController(ViagemRepository viagemRepository) {
-		this.viagemRepository = viagemRepository;
+	public ViagemViewController(ViagensRepository viagensRepository) {
+		this.viagensRepository = viagensRepository;
 	}
 
 	@GetMapping
 	public String list(Model model) {
-		return null;
+		model.addAttribute("viagem", viagensRepository.findAll());
+		return "viagens";
 	}
 
 	@GetMapping("/form")
 	public String showForm(Model model) {
+		model.addAttribute("viagem", new Viagens());
 		return "form-cadastro";
 	}
 
 	@GetMapping("/{id}")
 	public String findById(@PathVariable Long id, Model model) {
-		return null;
+		model.addAttribute("viagem", viagensRepository.findById(id).get());
+		return "form-cadastro";
 	}
 
 	@GetMapping("/{id}/delete")
 	public RedirectView delete(@PathVariable Long id) {
-		viagemRepository.deleteById(id);
+		viagensRepository.deleteById(id);
 		RedirectView redirectView = new RedirectView("/viagens");
 		return redirectView;
 	}
-
+	
 	@PostMapping("/save")
-	@Transactional
-	public RedirectView save(@ModelAttribute("viagem") FormRequestDTO formRequest, RedirectAttributes attrs) {
+	public RedirectView saveViagem(@ModelAttribute("viagem") Viagens viagem, RedirectAttributes attrs) {
 
-		Comandante comandante1 = formRequest.returnComandante1();
-		Comandante comandante2 = formRequest.returnComandante2();
-
-		Nave nave = new Nave(formRequest, comandante1, comandante2);
-		Viagem viagem = new Viagem(formRequest, nave);
-
-		Viagem viagemSalva = viagemRepository.saveAndFlush(viagem);
-		FormResponseDTO formResponseDTO = viagemSalva.convertToResponseDTO();
-
+		Viagens viagemSalva = viagensRepository.save(viagem);
+		
 		attrs.addFlashAttribute("viagemAdicionadaComSucesso", true);
-		attrs.addFlashAttribute("viagemSalva", formResponseDTO);
+		attrs.addFlashAttribute("viagemSalva", viagemSalva);
 
 		RedirectView redirectView = new RedirectView("/viagens");
-		return redirectView;
+
+		return redirectView;		
 		
 	}
+	
+	/*Viagens viagem1 = new Viagens(123, LocalDate.now(), 30, 880, LocalDate.now(), "XPTO333", 
+			300, "Antônio Carlos", "Rômulo Domiciano", "123C", "456B");*/
 
 }
+
+
+

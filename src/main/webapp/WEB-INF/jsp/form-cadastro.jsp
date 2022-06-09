@@ -12,17 +12,17 @@
 	</c:if>
 
 	<c:url var="viagem_salva_url" value="/viagens/save" />
-	<form:form action="${save_viagem_url}" method="post"
-		modelAttribute="formRequest">
+	<form:form action="${viagem_salva_url}" method="post"
+		modelAttribute="viagem">
 
-		<form:label path="id">Id: ${id}</form:label>
+		<form:label path="id" readonly="true">Id: ${id}</form:label>
 		<br>
 		<form:input type="text" path="id" readonly="true" />
 		<br>
 
 		<form:label path="dataDecolagem">Data da decolagem:</form:label>
 		<br>
-		<form:input type="text" path="dataDecolagem" />
+		<form:input path="dataDecolagem" />
 		<br>
 
 		<form:label path="diasEstadia">Dias estadia:</form:label>
@@ -30,9 +30,9 @@
 		<form:input type="text" path="diasEstadia" />
 		<br>
 
-		<form:label path="modelo">Modelo da nave:</form:label>
+		<form:label path="modeloNave">Modelo da nave:</form:label>
 		<br>
-		<form:input type="text" path="modelo" />
+		<form:input type="text" path="modeloNave" />
 		<br>
 
 		<form:label path="assentos">Assentos:</form:label>
@@ -42,29 +42,30 @@
 
 		<h3>Informações do Primeiro comandante</h3>
 
-		<form:label path="matriculaInterespacial">Matrícula Interespacial:</form:label>
+		<form:label path="matriculaInterespacial1">Matrícula Interespacial:</form:label>
 		<br>
-		<form:input type="text" path="matriculaInterespacial" />
+		<form:input type="text" path="matriculaInterespacial1" />
 		<br>
 
-		<form:label path="nome">Nome:</form:label>
+		<form:label path="comandante1">Nome:</form:label>
 		<br>
-		<form:input type="text" path="nome" />
+		<form:input type="text" path="comandante1" />
 		<br>
 
 		<h3>Informações do Segundo comandante</h3>
 
-		<form:label path="matriculaInterespacial">Matrícula Interespacial:</form:label>
+		<form:label path="matriculaInterespacial2">Matrícula Interespacial:</form:label>
 		<br>
-		<form:input type="text" path="matriculaInterespacial" />
-		<br>
-
-		<form:label path="nome">Nome:</form:label>
-		<br>
-		<form:input type="text" path="nome" />
+		<form:input type="text" path="matriculaInterespacial2" />
 		<br>
 
-		<input type="submit" name="salver" value="Salvar" />
+		<form:label path="comandante2">Nome:</form:label>
+		<br>
+		<form:input type="text" path="comandante2" />
+		<br>
+
+		<input type="submit" name="salvar" value="Salvar" />
+		
 	</form:form>
 </body>
 </html>
