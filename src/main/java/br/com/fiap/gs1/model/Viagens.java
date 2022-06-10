@@ -2,6 +2,7 @@ package br.com.fiap.gs1.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,16 +23,28 @@ public class Viagens {
 	private Long id;
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	
+	@Column(name = "data_decolagem")
 	private LocalDate dataDecolagem;
+	
+	@Column(name = "dias_estadia")
 	private int diasEstadia;
+	
+	@Column(name = "dias_viagem_idaevolta")
 	private int diasViagemIdaEVolta = 880;
 
+	@Column(name="modelo_nave")
 	private String modeloNave;
+	
 	private int assentos;
 
 	private String comandante1;
 	private String comandante2;
+	
+	@Column(name="matricula_interespacial1")
 	private String matriculaInterespacial1;
+	
+	@Column(name="matricula_interespacial2")
 	private String matriculaInterespacial2;
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy")

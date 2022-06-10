@@ -1,0 +1,2 @@
+INSERT INTO VIAGENS(id, data_decolagem, dias_estadia, dias_viagem_idaevolta, modelo_nave, assentos, comandante1, comandante2, matricula_interespacial1, matricula_interespacial2)
+VALUES(123654, '2022-07-22', 300, 880, 'XPTO-3387', 30, 'ANTONIO CARLOS LIMA JUNIOR', 'MATHEUS MODANEZ', '123-9999-X98', '257-9999-Y98');

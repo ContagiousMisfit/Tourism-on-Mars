@@ -4,6 +4,8 @@
 <html>
 <head>
 <link href="../css/viagens.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div>
@@ -24,7 +26,6 @@
 						<p>
 							<b>Data retorno:</b> ${viagem.dataRetorno}
 						</p>
-						<a href="viagens/${viagem.id}">Editar</a>
 					</div>
 					<div class='child'>
 						<p class='spaceship-name'>${viagem.modeloNave}</p>
@@ -43,7 +44,9 @@
 						<p>
 							Matrícula Interespacial: <br> <b>${viagem.matriculaInterespacial2}</b>
 						</p>
-						<a href="viagens/${viagem.id}/delete">Apagar</a>
+
+						<a href="viagens/${viagem.id}">Editar</a><a
+							href="viagens/${viagem.id}/delete">Apagar</a>
 					</div>
 			</div>
 			</c:forEach>

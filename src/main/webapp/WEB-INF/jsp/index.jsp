@@ -13,7 +13,7 @@
 			AC! Adicione, atualize e visualize todos os dados de viagens,
 			espaçonave, e de sua tripulação. O sistema da Tourism on Mars está
 			anos-luz à frente do mercado, quando se trata de viagem espacial.</p>
-		<a href="viagens">Viagens</a>
+		<a href="viagens" class="glass-btn">Viagens</a>
 	</div>
 </body>
 </html>

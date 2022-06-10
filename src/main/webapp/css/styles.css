@@ -24,7 +24,7 @@ p {
 	padding-bottom: 30px;
 }
 
-a {
+.glass-btn {
 	font-size: 22px;
 	font-family: 'Space Mono', monospace;
 	box-shadow: -8px 16px 32px -1px #121212;
