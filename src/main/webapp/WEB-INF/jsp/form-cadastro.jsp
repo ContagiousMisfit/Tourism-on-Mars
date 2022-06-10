@@ -16,53 +16,54 @@
 	<form:form action="${viagem_salva_url}" method="post"
 		modelAttribute="viagem">
 
-		<form:label path="id" readonly="true">Id: ${id}</form:label>
+		<form:label placeholder="gerado automaticamente :)" path="id"
+			readonly="true">Id: ${id}</form:label>
 		<br>
-		<form:input type="text" path="id" readonly="true" />
+		<form:input type="text" path="id" readonly="true" size="60" />
 		<br>
 
 		<form:label path="dataDecolagem">Data da decolagem:</form:label>
 		<br>
-		<form:input path="dataDecolagem" />
+		<form:input path="dataDecolagem" size="60" />
 		<br>
 
 		<form:label path="diasEstadia">Dias estadia:</form:label>
 		<br>
-		<form:input type="text" path="diasEstadia" />
+		<form:input type="text" path="diasEstadia" size="60" />
 		<br>
 
 		<form:label path="modeloNave">Modelo da nave:</form:label>
 		<br>
-		<form:input type="text" path="modeloNave" />
+		<form:input type="text" path="modeloNave" size="60" />
 		<br>
 
 		<form:label path="assentos">Assentos:</form:label>
 		<br>
-		<form:input type="text" path="assentos" />
+		<form:input type="text" path="assentos" size="60" />
 		<br>
 
 		<h3>Informações do Primeiro comandante</h3>
 
 		<form:label path="matriculaInterespacial1">Matrícula Interespacial:</form:label>
 		<br>
-		<form:input type="text" path="matriculaInterespacial1" />
+		<form:input type="text" path="matriculaInterespacial1" size="60" />
 		<br>
 
 		<form:label path="comandante1">Nome:</form:label>
 		<br>
-		<form:input type="text" path="comandante1" />
+		<form:input type="text" path="comandante1" size="60" />
 		<br>
 
 		<h3>Informações do Segundo comandante</h3>
 
 		<form:label path="matriculaInterespacial2">Matrícula Interespacial:</form:label>
 		<br>
-		<form:input type="text" path="matriculaInterespacial2" />
+		<form:input type="text" path="matriculaInterespacial2" size="60" />
 		<br>
 
 		<form:label path="comandante2">Nome:</form:label>
 		<br>
-		<form:input type="text" path="comandante2" />
+		<form:input type="text" path="comandante2" size="60"/>
 		<br>
 
 		<input type="submit" name="salvar" value="Salvar" class="glass-btn" />

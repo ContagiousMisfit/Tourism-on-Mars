@@ -29,13 +29,23 @@ a {
 }
 
 .glass-btn {
+	margin-top: 20px;
 	font-size: 20px;
 	font-family: 'Space Mono', monospace;
 	box-shadow: -8px 16px 32px -1px #121212;
 	padding: 16px 250px;
 	color: #FFFFFF;
+	background: transparent;
 	text-decoration: none;
 	text-transform: uppercase;
+	border: none;
+	transition: box-shadow .3s ease-in-out;
+}
+
+.glass-btn:hover {
+	box-shadow: none;
+	cursor: pointer;
+	color: #29B7D4;
 }
 
 .decolagem {
@@ -68,4 +78,31 @@ a {
 
 .container p {
 	text-align: center;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #0ddddd #d10076;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #d10076;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #0ddddd;
+	border-radius: 11px;
+	border: 3px none #ffffff;
+}
+
+::selection {
+	color: cyan;
+	background-color: transparent;
 }

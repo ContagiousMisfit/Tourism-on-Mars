@@ -11,13 +11,78 @@ body {
 	color: #f4f4f4;
 	font-family: 'Poppins', sans-serif;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-p {
-	font-size: 15px;
-	padding-bottom: 5px;
-	text-align: left;
+.glass-btn {
+	margin-top: 20px;
+	font-size: 20px;
+	font-family: 'Space Mono', monospace;
+	box-shadow: -8px 16px 32px -1px #121212;
+	padding: 16px 200px;
+	color: #FFFFFF;
+	background: transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: none;
+	transition: box-shadow .3s ease-in-out;
+}
+
+.glass-btn:hover {
+	box-shadow: none;
+	cursor: pointer;
+	color: #29B7D4;
+}
+
+input {
+	background: transparent;
+	outline: 0;
+	border-width: 0 0 2px;
+	border-color: #DADDEC;
+	color: #d4d4d4;
+	transition: border-color .3s ease-in-out;
+}
+
+input:focus {
+	border-color: #29B7D4;
+}
+
+label {
+	margin-top: 5px;
+}
+
+h3 {
+	padding: 20px;
+	color: #D10076;
+	font-family: 'Space Mono', monospace;
+	text-transform: uppercase;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #0ddddd #d10076;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #d10076;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #0ddddd;
+	border-radius: 11px;
+	border: 3px none #ffffff;
+}
+
+::selection {
+	color: cyan;
+	background-color: transparent;
 }
