@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
+<link href="../css/form.css" rel="stylesheet" type="text/css">
 <title>Adicionar Viagem ${viagem.id}</title>
 </head>
 <body>
@@ -64,8 +65,8 @@
 		<form:input type="text" path="comandante2" />
 		<br>
 
-		<input type="submit" name="salvar" value="Salvar" />
-		
+		<input type="submit" name="salvar" value="Salvar" class="glass-btn" />
+
 	</form:form>
 </body>
 </html>

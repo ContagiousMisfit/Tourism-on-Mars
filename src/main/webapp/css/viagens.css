@@ -22,17 +22,24 @@ a {
 	text-decoration: none;
 }
 
-.btn-small {
-	background-color: DodgerBlue;
-	border: none;
+.icon {
 	color: white;
-	padding: 12px 16px;
-	font-size: 16px;
-	cursor: pointer;
+	padding: 15px;
+	font-size: 25px;
 }
 
-.btn-small:hover {
-	background-color: RoyalBlue;
+.glass-btn {
+	font-size: 20px;
+	font-family: 'Space Mono', monospace;
+	box-shadow: -8px 16px 32px -1px #121212;
+	padding: 16px 250px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.decolagem {
+	background-color: rgb(255, 255, 255, 0.2);
 }
 
 .parent {
@@ -54,6 +61,11 @@ a {
 }
 
 .container {
-	display: inline-block;
+	width: 50%;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+.container p {
 	text-align: center;
 }
